@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+body{overflow-x: hidden;}
+
+.wrap {
+    contain: paint;
+}
+
+.firstView {
+    display: flex;
+    animation: fadein 0.5s ease-in-out;
+}
+
+.firstView li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff;
+    cursor: pointer;
+    flex-basis: 50vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: firstView 0.6s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.card.active {
+    flex: 74vw 5 0;
+}
+
+.card.inactive::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card .link {
+    position: relative;
+    width: 70%;
+    height: 90%;
+    transition: 1s;
+}
+
+.card .link.l1 {
+    margin-right: auto;
+}
+
+.card .link.l1 .text-wrap {
+    position: relative;
+    height: inherit;
+}
+
+.card .link.l1 .text-wrap .text-1 {
+    width: 290px;
+    height: 152px;
+    margin-left: 22%;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideUp 1s cubic-bezier(0.38, -0.01, 0.01, 1.1);
+    transition: 0.5s;
+}
+
+.card .link.l1 .text-wrap .text-2 {
+    width: 765px;
+    height: 128px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card.normal .link.l1 .text-wrap .text-1 {
+    bottom: 20px;
+    left: 50%;
+    transition-duration: 0.3s;
+}
+
+.card.active .link.l1 .text-wrap .text-1 {
+    bottom: 145px;
+    left: auto;
+    right:calc(-59% + 120px);
+    margin-right: 0;
+    opacity: 1;
+}
+
+.card.active .link.l1 .text-wrap .text-2 {
+    bottom: 25px;
+    left: auto;
+    right: calc(-83.5% + 120px);
+    margin-right: 0;
+    opacity: 1;
+}
+
+.card.inactive .link.l1 .text-wrap .text-1 {
+    animation: slideDown 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.card .link.l2 {
+    margin-left: auto;
+}
+
+.card .link.l2 .text-wrap{
+    position: relative;
+    height: inherit;
+}
+.card .link.l2 .text-wrap .text-1 {
+    width: 390px;
+    height: 163px;
+    margin-left: -22%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideUp 1s cubic-bezier(0.38, -0.01, 0.01, 1.1);
+    transition: 0.5s;
+}
+
+.card .link.l2 .text-wrap .text-2 {
+    width: 886px;
+    height: 128px;
+    margin-left: -22%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card.normal .link.l2 .text-wrap .text-1 {
+    bottom: 20px;
+    left: 50%;
+    transition-duration: 0.3s;
+}
+
+.card.active .link.l2 .text-wrap .text-1 {
+    bottom: 145px;
+    left: 115px;
+    opacity: 1;
+}
+
+.card.active .link.l2 .text-wrap .text-2 {
+    bottom: 25px;
+    left: 362px;
+    opacity: 1;
+}
+
+.card.inactive .link.l2 .text-wrap .text-1{
+    animation: slideDown 0.3s ease-in-out;
+    opacity: 0;
+
+}
+@keyframes firstView {
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        margin-bottom: -60px;
+        opacity: 0;
+    }
+
+    to {
+        margin-bottom: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        margin-bottom: 0px;
+        opacity: 1;
+    }
+
+    to {
+        margin-bottom: -60px;
+        opacity: 0;
+    }
+}
+
+@media (min-width: 2580px) {
+    .card {
+        background-size: cover;
+    }
+}
