@@ -25,7 +25,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../images../images/gnb_transparent.png") no-repeat center center;
+    background: url("../images/gnb_transparent.png") no-repeat center center;
     background-size: 100% !important;
     transition: top 0.5s;
 }
@@ -35,7 +35,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../images../images/gnb_solid.png") no-repeat center center;
+    background: url("../images/gnb_solid.png") no-repeat center center;
     background-size: 100% !important;
     transition: top 0.5s;
 }
@@ -45,7 +45,7 @@
 }
 #header .gnb_wrap.solid {
     /* top: 0; */
-    background: url("../images../images/gnb_solid.png") no-repeat center center;
+    background: url("../images/gnb_solid.png") no-repeat center center;
     transition: top 0.5s, background 0.5s;
 }
 
@@ -117,22 +117,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../images../images/toggle_bg.png") no-repeat center center;
+    background: url("../images/toggle_bg.png") no-repeat center center;
     background-size: 100%;
     transition: top 0.5s;
 }
 .toggle_wrap.type02 {
-    background: url("../images../images/toggle_bg_type02.png") no-repeat center center;
+    background: url("../images/toggle_bg_type02.png") no-repeat center center;
     background-size: 100%;
     transition: top 0.5s;
 }
 .toggle_wrap.on {
-    background: url("../images../images/toggle_bg_on.png") no-repeat center center;
+    background: url("../images/toggle_bg_on.png") no-repeat center center;
     background-size: 100%;
     transition: top 0.5s;
 }
 .toggle_wrap.on.type02 {
-    background: url("../images../images/toggle_bg_on_type02.png") no-repeat center center;
+    background: url("../images/toggle_bg_on_type02.png") no-repeat center center;
     background-size: 100%;
     transition: top 0.5s;
 }
