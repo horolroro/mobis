@@ -105,8 +105,11 @@ $(function(){
     function toggleDt(){
         if ($("#toggle .tg_btn").hasClass("on")){
             // cargo on
-            $(".landing.bike").removeClass("on");
-            $(".landing.cargo").addClass("on");
+            // $(".landing.bike").removeClass("on");
+            // $(".landing.cargo").addClass("on");
+            $(".landing.bike").fadeOut(0);
+            $(".landing.cargo").fadeIn(500);
+
             $(".toggle_wrap").addClass("on");
             $(".toggle_wrap .btn_wrap .bike").removeClass("on");
             $(".toggle_wrap .btn_wrap .cargo").addClass("on");
@@ -114,8 +117,11 @@ $(function(){
             $(".toggle_wrap.type02 a.link").attr("href","cargo.html");
         } else {
             // bike on
-            $(".landing.cargo").removeClass("on");
-            $(".landing.bike").addClass("on");
+            // $(".landing.cargo").removeClass("on");
+            // $(".landing.bike").addClass("on");
+            $(".landing.cargo").fadeOut(0);
+            $(".landing.bike").fadeIn(500);
+
             $(".toggle_wrap").removeClass("on");
             $(".toggle_wrap .btn_wrap .cargo").removeClass("on");
             $(".toggle_wrap .btn_wrap .bike").addClass("on");
